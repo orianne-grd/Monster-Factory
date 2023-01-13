@@ -35,45 +35,45 @@ const ShowMonster = ({ monstre, type }) => {
         <div className="modal">
             <div className="header">{monster.name}</div>
             <div className="content">
-                <div class="form-group">
-                    <label class="name">Date de naissance :</label>
-                    <label class="value"> {naissance.toLocaleDateString(undefined, options)} </label>
+                <div className="form-group">
+                    <label className="name">Date de naissance :</label>
+                    <label className="value"> {naissance.toLocaleDateString(undefined, options)} </label>
                 </div>
-                <div class="form-group">
-                    <label class="name">Vie :</label>
-                    <label class="value"> {monster.vie} </label>
+                <div className="form-group">
+                    <label className="name">Vie :</label>
+                    <label className="value"> {monster.vie} </label>
                 </div>
-                <div class="form-group">
-                    <label class="name">Faim :</label>
-                    <label class="value"> {monster.faim} </label>
+                <div className="form-group">
+                    <label className="name">Faim :</label>
+                    <label className="value"> {monster.faim} </label>
                 </div>
-                <div class="form-group">
-                    <label class="name">Fatigue :</label>
-                    <label class="value"> {monster.fatigue.toString()} </label>
+                <div className="form-group">
+                    <label className="name">Fatigue :</label>
+                    <label className="value"> {monster.fatigue.toString()} </label>
                 </div>
-                <div class="form-group">
-                    <label class="name">Adulte :</label>
-                    <label class="value"> {monster.adulte.toString()} </label>
+                <div className="form-group">
+                    <label className="name">Adulte :</label>
+                    <label className="value"> {monster.adulte.toString()} </label>
                 </div>
-                <div class="form-group">
-                    <label class="name">Taille :</label>
-                    <label class="value"> {monster.taille} </label>
+                <div className="form-group">
+                    <label className="name">Taille :</label>
+                    <label className="value"> {monster.taille} </label>
                 </div>
-                <div class="form-group">
-                    <label class="name">Couleur :</label>
-                    <label class="value"> {monster.couleur} </label>
+                <div className="form-group">
+                    <label className="name">Couleur :</label>
+                    <label className="value"> {monster.couleur} </label>
                 </div>
-                <div class="form-group">
-                    <label class="name">Sexe :</label>
-                    <label class="value"> {monster.sexe} </label>
+                <div className="form-group">
+                    <label className="name">Sexe :</label>
+                    <label className="value"> {monster.sexe} </label>
                 </div>
-                <div class="form-group">
-                    <label class="name">Poid :</label>
-                    <label class="value"> {monster.poids} </label>
+                <div className="form-group">
+                    <label className="name">Poid :</label>
+                    <label className="value"> {monster.poids} </label>
                 </div>
-                <div class="form-group">
-                    <label class="name">Type :</label>
-                    <label class="value"> {type.name} </label>
+                <div className="form-group">
+                    <label className="name">Type :</label>
+                    <label className="value"> {type.name} </label>
                 </div>
                 <div className="center">
                     {!monster.adulte && <button className="black-button mlr" onClick={handleClickGrow}>Grandir</button>}

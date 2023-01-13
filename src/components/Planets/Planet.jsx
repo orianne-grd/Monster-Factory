@@ -40,15 +40,10 @@ const ShowPlanet = (props) => {
 
   const [markers, addMarkers] = useState([]);
 
-  function onMeshClick() {        
-    console.log("rrrereyreyery : ");
-  };
-
   function setPoints(e) {
     if (props.enable) {    
       var gr = globeRef.current;
       var mesh = new THREE.Mesh();
-      mesh.addEventListener("click", onMeshClick )
       
       mesh.position.x = e.point.x;
       mesh.position.y = e.point.y;
@@ -61,8 +56,6 @@ const ShowPlanet = (props) => {
 
       const meshTest = <div> {mesh}</div> ;
       // document.getElementById('root').append(mesh.raycast);
-
-      console.log(e.faceIndex);
 
       addMarkers( markers => [...markers, <Marker e={e} planet={props.planet} />]);
       props.setEnable(false);

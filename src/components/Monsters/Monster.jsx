@@ -8,8 +8,6 @@ import { MonsterTypeService } from "../../services/monster.service";
 const Monster = ({ monstre }) => {
 
   let type = MonsterTypeService(monstre._id); 
-  console.log("le type : "); 
-  console.log(type); 
       
   const meshRef = useRef();
   const [color, setColor] = useState(0xff0000);
@@ -18,11 +16,6 @@ const Monster = ({ monstre }) => {
 
   const [open, setOpen] = useState(false);  
   const closeModal = () => setOpen(false);
-
-  function afficheMonstre(e) {
-    console.log("je clique sur le marker")
-  }
-    
 
   return (
     <>  
