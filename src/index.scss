@@ -1,0 +1,222 @@
+body,
+html,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Segoe UI;
+  // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  //   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  //   sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  background-color: rgb(0, 1, 8);
+  // background-image: url(assets/textures/2k_stars_milky_way.jpg);
+}
+
+H1,
+H2,
+H3,
+H4,
+P {
+  color: white;
+}
+
+.top-section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 24, 97, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+  z-index: 99;
+}
+
+.main-section {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  border: 1px solid gray;
+}
+
+.text-section {
+  max-width: 50%;
+  text-align: center;
+}
+
+.title-planet {
+  position: fixed;
+  color: white;
+  font-weight: bold;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  z-index: 2;
+}
+
+.mb {
+  margin-bottom: 15px;
+}
+
+.mlr {
+  margin: 0 15px;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.black-button {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  border: 1px solid gray;
+  cursor: pointer;
+  padding: 10px;
+
+  &:hover {
+    background: #444;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.retour {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+}
+
+.add {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+}
+
+.modal {
+  font-size: 18px;
+
+  .header {
+    border-bottom: 1px solid gray;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    width: 100%;
+    padding: 10px 5px;
+  }
+
+  .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+  }
+}
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  margin: auto;
+  background: rgb(255, 255, 255);
+  width: 50%;
+  padding: 5px;
+}
+
+.popup-arrow {
+  color: rgb(255, 255, 255);
+}
+
+[role='tooltip'].popup-content {
+  width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.764);
+}
+
+[data-popup='tooltip'].popup-overlay {
+  background: transparent;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+
+  .name {
+    width: 25%;
+    text-align: right;
+    font-weight: 600;
+  }
+
+  .value {
+    width: 75%;
+    margin-left: 1rem;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .text-section {
+    max-width: 80%;
+  }
+
+  .popup-content {
+    width: 70% !important;
+
+    .form-group>label {
+      width: auto;
+      text-align: left;
+    }
+  }
+}
