@@ -67,20 +67,20 @@ const AddMonster = ({ planet, e, setOpen }) => {
             <div className="header">Création de monstre</div>        
             <div className="content">
                 <form onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <label className="name">Nom :</label>
-                        <input className="value" type="text" name="nom" value={inputs.nom || ""} required="true" onChange={handleChange}/>
+                    <div class="form-group">
+                        <label class="name">Nom :</label>
+                        <input class="value" type="text" name="nom" value={inputs.nom || ""} required="true" onChange={handleChange}/>
                     </div>
-                    <div className="form-group">
-                        <label className="name">Sexe :</label>
-                        <div className="value"  onChange={handleChange}>
+                    <div class="form-group">
+                        <label class="name">Sexe :</label>
+                        <div class="value"  onChange={handleChange}>
                             <input type="radio" name="sexe" value="M"/>Homme
                             <input type="radio" name="sexe" value="F"/>Femme
                         </div>;
                     </div>
-                    <div className="form-group">
-                        <label className="name">Couleur :</label>
-                        <select className="value" name="couleur" value={inputs.couleur || ""} required="true" onChange={handleChange}>
+                    <div class="form-group">
+                        <label class="name">Couleur :</label>
+                        <select class="value" name="couleur" value={inputs.couleur || ""} required="true" onChange={handleChange}>
                             <option></option>
                             <option value="white">white </option>
                             <option value="blue">blue</option>
@@ -92,17 +92,17 @@ const AddMonster = ({ planet, e, setOpen }) => {
                             <option value="black">black</option>
                         </select>
                     </div>
-                    <div className="form-group">
-                        <label className="name">Taille :</label>
-                        <input className="value" type="number" name="taille" value={inputs.taille || ""} required="true" onChange={handleChange}/>
+                    <div class="form-group">
+                        <label class="name">Taille :</label>
+                        <input class="value" type="number" name="taille" value={inputs.taille || ""} required="true" onChange={handleChange}/>
                     </div>
-                    <div className="form-group">
-                        <label className="name">Poids :</label>
-                        <input className="value" type="number" name="poids" value={inputs.poids || ""} required="true" onChange={handleChange}/>
+                    <div class="form-group">
+                        <label class="name">Poids :</label>
+                        <input class="value" type="number" name="poids" value={inputs.poids || ""} required="true" onChange={handleChange}/>
                     </div>
-                    <div className="form-group">
-                        <label className="name">Type :</label>                        
-                        <select className="value" name="type" value={inputs.type || ""} required="true" onChange={handleChange} >
+                    <div class="form-group">
+                        <label class="name">Type :</label>                        
+                        <select class="value" name="type" value={inputs.type || ""} required="true" onChange={handleChange} >
                             <option></option>
                             <option value="63c033be3b60853a79004a0c" label="Caelum"></option>
                             <option value="63c033c33b60853a79004a0e" label="Acervus"></option>

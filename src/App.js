@@ -39,8 +39,10 @@ const App = () => {
           <Suspense fallback={<Html><Loader /></Html>}>
             <Planet enable={enable} setEnable={setEnable} />
           </Suspense>
-        </Canvas> 
-        <AddMarker enable={enable} setEnable={setEnable} />
+        </Canvas>
+        { (window.sessionStorage.getItem('user_id') ? window.sessionStorage.getItem('user_id') : null ) != null &&
+          <AddMarker enable={enable} setEnable={setEnable} />
+        }     
         </>,
     },
   ]);

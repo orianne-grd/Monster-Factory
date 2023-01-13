@@ -21,10 +21,12 @@ const Planet = ({enable, setEnable}) => {
   return (
     <>
       {(result) &&      
-        <ShowPlanet planet={result} enable={enable} setEnable={setEnable} />        
+        <ShowPlanet planet={result} enable={enable} setEnable={setEnable}>
+          
+        </ShowPlanet>          
       }   
       {monstres?.map((monstre, idx) => (
-            <Monster listMonstres={monstres} monstre={monstre} key={idx} />
+            <Monster monstre={monstre} key={idx} />
           ))}    
     </>
   )

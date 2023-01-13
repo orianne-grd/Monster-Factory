@@ -5,9 +5,11 @@ import Popup from 'reactjs-popup';
 import ShowMonster from "./ShowMonster";
 import { MonsterTypeService } from "../../services/monster.service";
 
-const Monster = ({ listMonstres, monstre }) => {
+const Monster = ({ monstre }) => {
 
   let type = MonsterTypeService(monstre._id); 
+  console.log("le type : "); 
+  console.log(type); 
       
   const meshRef = useRef();
   const [color, setColor] = useState(0xff0000);
@@ -31,7 +33,7 @@ const Monster = ({ listMonstres, monstre }) => {
 
       <Html>
         <Popup open={open} closeOnDocumentClick onClose={closeModal} position="right center">
-          <ShowMonster listMonstres={listMonstres} monstre={monstre} type={type}/>
+          <ShowMonster monstre={monstre} type={type}/>
         </Popup>
       </Html>
     </>

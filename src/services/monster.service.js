@@ -168,26 +168,22 @@ export const AddMonsterService = (monster) => {
 }
 
 export const BabyMonsterService = (idMonster1, idMonster2, name) => {
-  axios.post(API_URL + '/api/monster/baby/' + idMonster1 + '/' + idMonster2 + '/' + name)
-  .then()
-  .catch((err) => {
-    console.log(err.message);
-  });
-  // const [baby, setBaby] = useState([]);
 
-  // useEffect(() => {
-  //   if (idMonster1 && idMonster2 && name) {
-  //     axios.post(API_URL + '/api/monster/baby/' + idMonster1 + '/' + idMonster2 + '/' + name)
-  //       .then((data) => {
-  //         setBaby(data);
-  //       })
-  //       .catch((err) => {
-  //         console.log(err.message);
-  //       });
-  //   }
-  // }, []);
+  const [baby, setBaby] = useState([]);
 
-  // return baby;
+  useEffect(() => {
+    if (idMonster1 && idMonster2 && name) {
+      axios.post(API_URL + '/api/monster/baby/' + idMonster1 + '/' + idMonster2 + '/' + name)
+        .then((data) => {
+          setBaby(data);
+        })
+        .catch((err) => {
+          console.log(err.message);
+        });
+    }
+  }, []);
+
+  return baby;
 }
 
 export const GrowMonsterService = (idMonster) => {
